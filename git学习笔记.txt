@@ -1,0 +1,35 @@
+git：分布式版本控制软件
+
+常用命令：
+	git add：将本地的文件 增加到 暂存区
+	git commit：将暂存区的内容 提交到 本地分支（默认master-主分支）
+	git push：将本地仓库的内容 推送到 远程分支
+	git pull：将远程仓库中的内容 拉取到 本地分支
+
+配置用户信息和邮箱信息
+	$ git config --global user.name "zyz"
+	$ git config --global user.email "895121748@qq.com"
+
+搭建git服务器(远程仓库)
+	统一托管网站：https://github.com/
+
+设置本地和远程免密钥登录
+	配置ssh：先在本地配置，然后发送给远程
+		① 命令： ssh-keygen -t rsa -C 895121748@qq.com
+		② 本地文件位置：C:\Users\zyz\.ssh
+		③ 发送给远程：github-setting-ssh and gpr keys -new ssh 将公钥内容复制进去
+	查看是否配置成功
+		ssh -T git@github.com
+	成功的话C:\Users\zyz\.ssh下会生成一个文件known_hosts
+
+本地新建git项目
+	在项目根目录右键 git bash here，然后执行git init 会生成一个.git文件
+
+在远程新建git项目
+	然后会生成一个地址（唯一标识https://github.com/zyz199221/mygit0510.git）
+
+将 本地新建 的git项目和 远程项目 进行关联
+	git remote add oragin git@github.com:zyz199221/mygit0510.git
+
+	
+	
